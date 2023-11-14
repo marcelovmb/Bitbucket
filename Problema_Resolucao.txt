@@ -1,0 +1,22 @@
+Problema no Bitbucket:
+Ao criar um novo repositorio no bitbucket ele cria sem nenhuma branch, 
+ele esta "configurado" para criar a master entretanto sem estar criada.
+
+Com isso não é possivel fazer nenhum push pois não ainda existe existe branch.
+
+
+Resolução:
+1-Criar a branch ja no padrão "main"
+2-Configurar com uma conta ADM qual é a Default branch, na situação atual a "main"
+
+Comandos para executar:
+git clone https://<repo_owner>@bitbucket.org/<accountname>/<reponame>.git
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git push -u origin main
+
+git checkout -b main 
+crie seu prieiro arquivo dentro de main.
+git add .
+git commit -m "Primeiro commit na branch main"
+git pull
